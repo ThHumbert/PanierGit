@@ -4,7 +4,7 @@
 	</target>
 	<target name="compile">
 		<mkdir dir="bin"/>
-		<javac destdir="bin" srcdir="src;tests" classpath="lib\junit.jar"></javac>
+		<javac destdir="bin" srcdir="src;test" classpath="lib\junit.jar"></javac>
 	</target>
 	<target name="tests" depends ="compile">
 		<junit>
@@ -15,7 +15,7 @@
 			</classpath>
 			<formatter type ="xml"/>
 			<test name="OrangeTest" outfile="result"></test>
-			<test name="PanierTest" outfile="result2"></test>
+			<!--test name="PanierTest" outfile="result2"></test-->
 		</junit>
 		<junitreport todir="${basedir}">
 			<fileset dir="${basedir}">
