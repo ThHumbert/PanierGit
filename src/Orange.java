@@ -17,8 +17,12 @@ public double getPrix() {
 }
 @Override
 public boolean equals(Object o) {
-	Orange or = (Orange) o;
-	return or.getOrigine().equals(origine) && or.getPrix() == prix;
+	if (o != null) {
+		
+		Orange or = (Orange) o;
+		return or.getOrigine().equals(origine) && or.getPrix() == prix;
+	}
+	return false;
 }
 
 @Override
